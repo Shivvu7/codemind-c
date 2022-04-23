@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main ()
 {
-    int n,d,s=0;
+    int n,k=0,i,d;
     scanf("%d",&n);
-    while(n>0)
+    for(i=1;i<n;i++)
     {
         d=n%10;
-        if(s<d)
+        if(d>k)
         {
-            s=d;
+            k=d;
         }
         n=n/10;
     }
-    printf("%d",s);
+    printf("%d",k);
 }
-        
