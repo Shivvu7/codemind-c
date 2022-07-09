@@ -1,23 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int n,d,res1=0,res2=0,res3=0,res4=0,d1;
-    scanf("%d",&n);
-    res1=n*n;
-    while(n)
+    int a;
+    scanf("%d",&a);
+    int b,rev=0,temp,sq1,sq2,sum=0;
+    int i;
+    temp=a;
+    sq1=a*a;
+    while (temp>0)
     {
-        d=n%10;
-        res2=res2*10+d;
-        n=n/10;
+        b=temp%10;
+        rev=(rev*10)+b;
+        temp=temp/10;
     }
-    res3=res2*res2;
-    while(res3)
+    sq2=rev*rev;
+    rev=0;
+    temp=sq2;
+    while (temp>0)
     {
-        d1=res3%10;
-        res4=res4*10+d1;
-        res3=res3/10;
+        b=temp%10;
+        rev=(rev*10)+b;
+        temp=temp/10;
     }
-    if(res1==res4)
+    if (rev==sq1)
     {
         printf("True");
     }
@@ -25,4 +30,6 @@ int main()
     {
         printf("False");
     }
+    return 0;
+    
 }
